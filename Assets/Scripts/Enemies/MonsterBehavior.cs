@@ -29,6 +29,7 @@ public class MonsterBehavior : MonoBehaviour {
 
     public void Die() {
         //Instantiate blood particle
+        Destroy(gameObject);
     }
 
 }

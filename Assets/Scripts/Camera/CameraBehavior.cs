@@ -17,6 +17,10 @@ public class CameraBehavior : MonoBehaviour {
 
     [SerializeField] private Texture2D cursorSprite;
 
+    //[SerializeField] private PostProcessingBehavior mainProfile;
+    //[SerializeField] private PostProcessingBehavior distortProfile;
+
+
 
     void Start () {
         //Cursor.SetCursor(cursorSprite, Vector2.zero, CursorMode.Auto);
