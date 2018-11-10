@@ -7,6 +7,7 @@ TagManager:
   - Innocent
   - FxTemporaire
   - Monster
+  - SplashFx
   layers:
   - Default
   - TransparentFX

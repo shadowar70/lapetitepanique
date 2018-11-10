@@ -15,12 +15,37 @@ public class EnemyGenerator : MonoBehaviour
 
 	public PrefabFrequency[] prefabs = new PrefabFrequency[0];
 	
+	public IReadOnlyList<GameObject> GeneratedEnemies
+	{
+		get
+		{
+			return generatedEnemies;
+		}
+	}
+
+	private List<GameObject> generatedEnemies = new List<GameObject>();
 	private float totalFrequency = 0f;
+
+	void Start ()
+	{
+		totalFrequency = prefabs.Select(e => e.frequency).Sum();
+	}
+	
+	void Update ()
+	{
+		var destroyedGameObjects = generatedEnemies.Where(e => e == null).ToList();
+		foreach(var destroyedGameObject in destroyedGameObjects)
+		{
+			generatedEnemies.Remove(destroyedGameObject);
+		}
+	}
 
 	public GameObject GenerateEnemy(Vector3 position, Quaternion rotation)
 	{
 		var prefab = GetRandomPrefab();
 		var enemy = Instantiate(prefab, position, rotation);
+		generatedEnemies.Add(enemy);
+
 		return enemy;
 	}
 
