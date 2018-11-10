@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114315829440091696}
   - component: {fileID: 114799274864113032}
   - component: {fileID: 114243282493502954}
+  - component: {fileID: 114801967286461506}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Monster
@@ -143,7 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceTag: Zombie Innocent Audio Source
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 54d37cac35d062148a87c40bcb2cc6e5, type: 3}
+  - {fileID: 8300000, guid: ce596ff3db4dac04f9a5ea2b05dfa1b7, type: 3}
 --- !u!114 &114315829440091696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +170,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
+--- !u!114 &114801967286461506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659304807212458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e3ec3275c7e474fb6ee2900f3da0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceTag: Zombie Innocent Audio Source
+  audioClips:
+  - {fileID: 8300000, guid: 11a877d2f7f0fd0468ad2dd02a9c75dc, type: 3}
+  - {fileID: 8300000, guid: a46b01d2ba4823f4fb221150311a1fe7, type: 3}
+  - {fileID: 8300000, guid: a99ea5052ea294444b3bf49f79832a7f, type: 3}
 --- !u!114 &114829906614274466
 MonoBehaviour:
   m_ObjectHideFlags: 1
