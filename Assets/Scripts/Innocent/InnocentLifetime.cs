@@ -12,7 +12,11 @@ public class InnocentLifetime : MonoBehaviour
 	private Animator animator;
 	private EnemyGenerator enemyGenerator;
 
-	void Awake()
+    private bool isDying = false;
+    public GameObject soulPrefab;
+    private float scoreMultiplier;
+
+    void Awake()
 	{
 		animator = GetComponent<Animator>();
 		enemyGenerator = FindObjectOfType<EnemyGenerator>();
@@ -22,12 +26,21 @@ public class InnocentLifetime : MonoBehaviour
 	{
 		startTime = Time.time;
 		StartCoroutine(WaitBeforeDyingState());
+
 	}
-	
-	IEnumerator WaitBeforeDyingState()
+
+    private void Update() {
+        if (isDying) {
+            scoreMultiplier += Time.deltaTime;
+        }
+    }
+
+    IEnumerator WaitBeforeDyingState()
 	{
 		yield return new WaitForSeconds(healthyTime);
-		animator.SetBool("Dying", true);
+
+        isDying = true;
+        animator.SetBool("Dying", true);
 
 		StartCoroutine(WaitBeforeDeathState());
 
@@ -44,4 +57,18 @@ public class InnocentLifetime : MonoBehaviour
 		
 		Destroy(gameObject);
 	}
+
+    public bool Die() {
+        if (isDying) {
+            //Instantiate Monster
+        }
+        else {
+            Instantiate(soulPrefab, transform.position, Quaternion.identity);
+        }
+        return isDying;
+    }
+
+    public float GetScore() {
+        return (scoreMultiplier / dyingTime)*2;
+    }
 }
