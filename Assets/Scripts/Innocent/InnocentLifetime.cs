@@ -17,6 +17,8 @@ public class InnocentLifetime : MonoBehaviour
     public GameObject soulMonsterPrefab;
     private float scoreMultiplier;
 
+    private SpriteRenderer rendererBody;
+
     void Awake()
 	{
 		animator = GetComponent<Animator>();
@@ -26,7 +28,9 @@ public class InnocentLifetime : MonoBehaviour
 	void Start()
 	{
 		startTime = Time.time;
-		StartCoroutine(WaitBeforeDyingState());
+        rendererBody = GetComponent<SpriteRenderer>();
+
+        StartCoroutine(WaitBeforeDyingState());
 
 	}
 
@@ -42,8 +46,9 @@ public class InnocentLifetime : MonoBehaviour
 
         isDying = true;
         animator.SetBool("Dying", true);
+        StartCoroutine(DeathStarting());
 
-		StartCoroutine(WaitBeforeDeathState());
+        StartCoroutine(WaitBeforeDeathState());
 
 	}
 	
@@ -59,6 +64,35 @@ public class InnocentLifetime : MonoBehaviour
 		
 		Destroy(gameObject);
 	}
+
+    IEnumerator DeathStarting() {
+        float i = 0;
+        bool isRed = false;
+
+        while (true) {
+
+            i += 0.1f;
+            if (isRed) {
+                rendererBody.color = Color.Lerp(rendererBody.color, Color.white, i);
+            }
+            else {
+                rendererBody.color = Color.Lerp(rendererBody.color, Color.red, i);
+            }
+
+            if(i> 1 && isRed) {
+                isRed = false;
+                i = 0;
+            }else if (i > 1 && !isRed) {
+                isRed = true;
+                i = 0;
+            }
+
+            //rendererBody.color = Color.Lerp(rendererBody.color, Color.red, i);
+
+            yield return new WaitForSeconds(0.02f);
+        }
+
+    }
 
     public bool Die() {
         if (isDying) {
