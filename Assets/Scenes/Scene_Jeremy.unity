@@ -687,6 +687,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerScore: 120
+  scoreValue: {fileID: 0}
+  timerValue: {fileID: 0}
+  multiplierValue: {fileID: 0}
 --- !u!4 &996144849
 Transform:
   m_ObjectHideFlags: 0

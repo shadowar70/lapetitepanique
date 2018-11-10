@@ -15,7 +15,8 @@ public class CameraBehavior : MonoBehaviour {
     private Vector3 targetPosition;
     private Quaternion targetRotation;
 
-    [SerializeField] private Texture2D cursorSprite;
+    [SerializeField] private Texture2D cursorNormalSprite;
+    [SerializeField] private Texture2D cursorClickSprite;
 
     //[SerializeField] private PostProcessingBehavior mainProfile;
     //[SerializeField] private PostProcessingBehavior distortProfile;
@@ -23,7 +24,7 @@ public class CameraBehavior : MonoBehaviour {
 
 
     void Start () {
-        //Cursor.SetCursor(cursorSprite, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursorNormalSprite, Vector2.zero, CursorMode.Auto);
 
         cameraDown = cameraPosition.transform.GetChild(0).transform;
         cameraLeft = cameraPosition.transform.GetChild(1).transform;
@@ -34,6 +35,11 @@ public class CameraBehavior : MonoBehaviour {
 	
 	
 	void Update () {
+
+        if (Input.GetButtonDown("Fire1")) {
+            Cursor.SetCursor(cursorClickSprite, Vector2.zero, CursorMode.Auto);
+            Invoke("SetCursorNormal", 0.2f);
+        }
 
         if (Input.GetButtonDown("RotateLeftCamera")) {
             switch (actualPosition) {
@@ -100,5 +106,9 @@ public class CameraBehavior : MonoBehaviour {
             yield return new WaitForSeconds(.015f);
         }
 
+    }
+
+    public void SetCursorNormal() {
+        Cursor.SetCursor(cursorNormalSprite, Vector2.zero, CursorMode.Auto);
     }
 }
