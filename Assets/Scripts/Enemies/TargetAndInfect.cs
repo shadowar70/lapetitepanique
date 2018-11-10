@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class TargetAndHitEnemy : MonoBehaviour
+public class TargetAndInfect : MonoBehaviour
 {
 	public float cooldown = 1f;
 
@@ -34,6 +34,7 @@ public class TargetAndHitEnemy : MonoBehaviour
     {
 		if(collision.gameObject == target)
 		{
+			Instantiate(gameObject, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
 			Destroy(target);
 		}
     }
