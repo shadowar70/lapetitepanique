@@ -16,7 +16,7 @@ public class PlayOnDestroyed : MonoBehaviour
 
 	void OnDestroy()
 	{
-		if(!audioSource.isPlaying)
+		if(audioSource != null && !audioSource.isPlaying)
 		{
 			audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
 		}

@@ -15,6 +15,8 @@ public class InnocentLifetime : MonoBehaviour
     private bool isDying = false;
     public GameObject soulInnoncentPrefab;
     public GameObject soulMonsterPrefab;
+    public GameObject bloodPrefab;
+
     private float scoreMultiplier;
 
     private SpriteRenderer rendererBody;
@@ -97,6 +99,9 @@ public class InnocentLifetime : MonoBehaviour
     public bool Die() {
         if (isDying) {
             Instantiate(soulInnoncentPrefab, transform.position, Quaternion.identity);
+        }
+        else {
+            Instantiate(bloodPrefab, transform.position, Quaternion.identity);
         }
         return isDying;
     }

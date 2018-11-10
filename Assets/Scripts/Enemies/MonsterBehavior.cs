@@ -6,8 +6,9 @@ public class MonsterBehavior : MonoBehaviour {
 
     public int hp = 5;
     private bool isDead = false;
+    public GameObject bloodPrefab;
 
-	void Start () {
+    void Start () {
 		
 	}
 	
@@ -29,6 +30,7 @@ public class MonsterBehavior : MonoBehaviour {
 
     public void Die() {
         //Instantiate blood particle
+        Instantiate(bloodPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
