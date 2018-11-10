@@ -11,11 +11,16 @@ public class CameraBehavior : MonoBehaviour {
     private Transform cameraRight;
     private int actualPosition = 0;
 
+
     private Vector3 targetPosition;
     private Quaternion targetRotation;
 
+    [SerializeField] private Texture2D cursorSprite;
+
 
     void Start () {
+        //Cursor.SetCursor(cursorSprite, Vector2.zero, CursorMode.Auto);
+
         cameraDown = cameraPosition.transform.GetChild(0).transform;
         cameraLeft = cameraPosition.transform.GetChild(1).transform;
         cameraRight = cameraPosition.transform.GetChild(2).transform;
