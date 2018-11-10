@@ -10,10 +10,12 @@ public class InnocentLifetime : MonoBehaviour
 
 	private float startTime = 0f;
 	private Animator animator;
+	private EnemyGenerator enemyGenerator;
 
 	void Awake()
 	{
 		animator = GetComponent<Animator>();
+		enemyGenerator = FindObjectOfType<EnemyGenerator>();
 	}
 
 	void Start()
@@ -34,6 +36,12 @@ public class InnocentLifetime : MonoBehaviour
 	IEnumerator WaitBeforeDeathState()
 	{
 		yield return new WaitForSeconds(dyingTime);
+		
+		if(enemyGenerator != null)
+		{
+			enemyGenerator.GenerateEnemy(transform.position, transform.rotation);
+		}
+		
 		Destroy(gameObject);
 	}
 }

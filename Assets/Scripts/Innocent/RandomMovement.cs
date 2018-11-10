@@ -8,11 +8,12 @@ public class RandomMovement : MonoBehaviour
     public float range = 30.0f;
 
     private NavMeshAgent navMeshAgent = null;
+    private float direction;
 
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.destination = RandomNavmeshLocation(range);
+        direction = Random.value;
     }
 
     void Update ()
@@ -32,8 +33,8 @@ public class RandomMovement : MonoBehaviour
 
     public Vector3 RandomNavmeshLocation(float radius)
     {
-        Vector3 randomDirection = Random.insideUnitSphere * radius;
-        randomDirection += transform.position;
+        var direction = Random.insideUnitCircle;
+        Vector3 randomDirection = transform.position + new Vector3(direction.x, 0, direction.y)  * radius;
         NavMeshHit hit;
         Vector3 finalPosition = Vector3.zero;
         if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))

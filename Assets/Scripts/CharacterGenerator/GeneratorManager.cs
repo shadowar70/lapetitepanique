@@ -17,6 +17,14 @@ public class GeneratorManager : MonoBehaviour
 	public AbstractGenerator[] generators = new AbstractGenerator[0];
 	public PrefabFrequency[] characterPrefabs = new PrefabFrequency[0];
 	
+	public IReadOnlyList<GameObject> GeneratedCharacters
+	{
+		get
+		{
+			return generatedCharacters;
+		}
+	}
+
 	private List<GameObject> generatedCharacters = new List<GameObject>();
 	private float totalFrequency = 0f;
 
@@ -36,6 +44,13 @@ public class GeneratorManager : MonoBehaviour
 		for(var i = generatedCharacters.Count; i < desiredCharacterNumber; i++)
 		{
 			var character = GenerateCharacter();
+
+			var lifetime = character.GetComponent<InnocentLifetime>();
+			if(lifetime != null)
+			{
+				lifetime.healthyTime = UnityEngine.Random.Range(0f, lifetime.healthyTime);
+			}
+
 			generatedCharacters.Add(character);
 		}
 	}
