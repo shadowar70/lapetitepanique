@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08cb88b086d01ce4cb8701edf275f017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthyTime: 10
+  healthyTime: 100
   dyingTime: 3
   soulPrefab: {fileID: 1531919130274190, guid: 0f355e5b9fc4ef24ea12986bc1c63293, type: 2}
 --- !u!114 &114660646968969058
