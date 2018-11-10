@@ -7,6 +7,12 @@ TagManager:
   - Innocent
   - FxTemporaire
   - Monster
+  - SplashFx
+  - Innocent Audio Source
+  - Basic Monster Audio Source
+  - Zombie Innocent Audio Source
+  - Vomit Monster Audio Source
+  - Soul Audio Source
   layers:
   - Default
   - TransparentFX

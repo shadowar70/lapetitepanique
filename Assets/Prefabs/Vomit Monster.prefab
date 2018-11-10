@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1766001847262330}
+  m_RootGameObject: {fileID: 1800260293013896}
   m_IsPrefabAsset: 1
---- !u!1 &1050399518331218
+--- !u!1 &1752861652686668
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4822870857214272}
-  - component: {fileID: 198819528350981792}
-  - component: {fileID: 199971758853786688}
+  - component: {fileID: 4352235791062492}
+  - component: {fileID: 198675112265536528}
+  - component: {fileID: 199266954247761132}
   m_Layer: 0
   m_Name: Smoke Circle
   m_TagString: Untagged
@@ -28,65 +28,65 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1766001847262330
+--- !u!1 &1800260293013896
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4580718146098530}
-  - component: {fileID: 212508144590150176}
-  - component: {fileID: 114175181319240954}
-  - component: {fileID: 195979348579431542}
-  - component: {fileID: 65977147323276332}
-  - component: {fileID: 114360581816087580}
-  - component: {fileID: 54572513605256020}
-  - component: {fileID: 114651915951658278}
-  - component: {fileID: 114234445815003722}
-  - component: {fileID: 114497985353528546}
-  - component: {fileID: 114861514300705558}
-  - component: {fileID: 114524942522273836}
+  - component: {fileID: 4561787969136566}
+  - component: {fileID: 212898438791056244}
+  - component: {fileID: 114017742932624246}
+  - component: {fileID: 195694661743171028}
+  - component: {fileID: 65117837172299264}
+  - component: {fileID: 114444210172484558}
+  - component: {fileID: 54767934574696320}
+  - component: {fileID: 114259512451403390}
+  - component: {fileID: 114909579680991862}
+  - component: {fileID: 114371968416279338}
+  - component: {fileID: 114923921949047678}
+  - component: {fileID: 114754960356981486}
   m_Layer: 0
-  m_Name: Base Monster
+  m_Name: Vomit Monster
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4580718146098530
+--- !u!4 &4352235791062492
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 183.90103, y: 61.548332, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
-  m_Children:
-  - {fileID: 4822870857214272}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4822870857214272
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1050399518331218}
+  m_GameObject: {fileID: 1752861652686668}
   m_LocalRotation: {x: -1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 6.666667, y: 0.6666667, z: 0}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_Children: []
-  m_Father: {fileID: 4580718146098530}
+  m_Father: {fileID: 4561787969136566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54572513605256020
+--- !u!4 &4561787969136566
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800260293013896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 223.3, y: 12.350934, z: 0}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
+  m_Children:
+  - {fileID: 4352235791062492}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54767934574696320
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -96,113 +96,117 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!65 &65977147323276332
+--- !u!65 &65117837172299264
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.22287, y: 9.015233, z: 1}
-  m_Center: {x: -0.0150095625, y: 0.5262731, z: 0}
---- !u!114 &114175181319240954
+  m_Size: {x: 4.4721136, y: 5.575639, z: 1}
+  m_Center: {x: -0.039933946, y: -0.14669207, z: 0}
+--- !u!114 &114017742932624246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecc1a455392e1614baee6127417c8448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114234445815003722
+--- !u!114 &114259512451403390
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fd134cc76fe8644b9ad99e825fe34e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
---- !u!114 &114360581816087580
+--- !u!114 &114371968416279338
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697b1ca495cad334e86699d4548a3128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 6
+  targetTag: SplashFx
+  triggerName: Show
+--- !u!114 &114444210172484558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5528c1592e54b4bacb98c59710fb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
---- !u!114 &114497985353528546
+--- !u!114 &114754960356981486
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecc1a455392e1614baee6127417c8448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114524942522273836
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02e3ec3275c7e474fb6ee2900f3da0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSourceTag: Basic Monster Audio Source
+  audioSourceTag: Vomit Monster Audio Source
   audioClips:
-  - {fileID: 8300000, guid: 5563a778bd0fa6d44958550a83ed815f, type: 3}
---- !u!114 &114651915951658278
+  - {fileID: 8300000, guid: 20b8a41c5b915f44190d0e900f7dce1d, type: 3}
+--- !u!114 &114909579680991862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231157417c528604ba92d5262f16590a, type: 3}
+  m_Script: {fileID: 11500000, guid: ecc1a455392e1614baee6127417c8448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
---- !u!114 &114861514300705558
+--- !u!114 &114923921949047678
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68ee288c2293e1a46a22e6bbd33c99c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSourceTag: Basic Monster Audio Source
+  audioSourceTag: Vomit Monster Audio Source
   audioClips:
-  - {fileID: 8300000, guid: 8a7954cdd9e1563479e11d49a7e9a7d3, type: 3}
-  - {fileID: 8300000, guid: 8c78a8a4118cd28458a70f4c6663e5a5, type: 3}
-  - {fileID: 8300000, guid: f651960e9100b714a8d385eda0e245b4, type: 3}
-  - {fileID: 8300000, guid: ac0a3b09283b5284eaec2aa4b08ca998, type: 3}
---- !u!195 &195979348579431542
+  - {fileID: 8300000, guid: 06251ebe98f9eaa4bb4acaca5e056791, type: 3}
+  - {fileID: 8300000, guid: 4fc2aacbbe89ccc4ea348b107bf3581f, type: 3}
+  - {fileID: 8300000, guid: d1e911c714ae16a46b6d0708c93cb4f3, type: 3}
+  - {fileID: 8300000, guid: 3cba314c50032b64aae31fb54095e211, type: 3}
+  - {fileID: 8300000, guid: a6ec9179ae036984eae5f671b0009db4, type: 3}
+  - {fileID: 8300000, guid: 8f538fdd207df724b9c0c2fb5b4fb4f2, type: 3}
+--- !u!195 &195694661743171028
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2.5
@@ -214,16 +218,16 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 8
+  m_Height: 6
   m_BaseOffset: 3.1400006
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!198 &198819528350981792
+--- !u!198 &198675112265536528
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1050399518331218}
+  m_GameObject: {fileID: 1752861652686668}
   serializedVersion: 5
   lengthInSec: 0.6
   simulationSpeed: 1
@@ -803,7 +807,7 @@ ParticleSystem:
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_Sprite: {fileID: 0}
-    m_SpriteRenderer: {fileID: 212508144590150176}
+    m_SpriteRenderer: {fileID: 212898438791056244}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
@@ -4700,13 +4704,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &199971758853786688
+--- !u!199 &199266954247761132
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1050399518331218}
+  m_GameObject: {fileID: 1752861652686668}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4757,12 +4761,12 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!212 &212508144590150176
+--- !u!212 &212898438791056244
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766001847262330}
+  m_GameObject: {fileID: 1800260293013896}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4792,7 +4796,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47fd4ab52040ba2499edb7683a6b1da7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f8bb2f77608154f9fc2995791cb981, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

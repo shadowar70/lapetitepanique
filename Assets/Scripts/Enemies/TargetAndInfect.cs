@@ -11,11 +11,13 @@ public class TargetAndInfect : MonoBehaviour
     private NavMeshAgent navMeshAgent = null;
 	private GeneratorManager generatorManager;
 	private GameObject target;
+	private EnemyGenerator enemyGenerator;
 
 	void Awake()
 	{
         navMeshAgent = GetComponent<NavMeshAgent>();
 		generatorManager = FindObjectOfType<GeneratorManager>();
+		enemyGenerator = FindObjectOfType<EnemyGenerator>();
 	}
 
 	void Update ()
@@ -34,7 +36,7 @@ public class TargetAndInfect : MonoBehaviour
     {
 		if(collision.gameObject == target)
 		{
-			Instantiate(gameObject, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+			enemyGenerator.GenerateEnemy(collision.gameObject.transform.position, collision.gameObject.transform.rotation);
 			Destroy(target);
 		}
     }
