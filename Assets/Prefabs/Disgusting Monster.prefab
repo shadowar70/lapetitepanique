@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 114360581816087580}
   - component: {fileID: 54572513605256020}
   - component: {fileID: 114651915951658278}
+  - component: {fileID: 114234445815003722}
   m_Layer: 0
   m_Name: Disgusting Monster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +116,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc1a455392e1614baee6127417c8448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114234445815003722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766001847262330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd134cc76fe8644b9ad99e825fe34e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
 --- !u!114 &114360581816087580
 MonoBehaviour:
   m_ObjectHideFlags: 1

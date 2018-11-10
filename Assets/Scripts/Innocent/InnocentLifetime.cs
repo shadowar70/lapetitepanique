@@ -13,7 +13,8 @@ public class InnocentLifetime : MonoBehaviour
 	private EnemyGenerator enemyGenerator;
 
     private bool isDying = false;
-    public GameObject soulPrefab;
+    public GameObject soulInnoncentPrefab;
+    public GameObject soulMonsterPrefab;
     private float scoreMultiplier;
 
     void Awake()
@@ -52,7 +53,8 @@ public class InnocentLifetime : MonoBehaviour
 		
 		if(enemyGenerator != null)
 		{
-			enemyGenerator.GenerateEnemy(transform.position, transform.rotation);
+            Instantiate(soulMonsterPrefab, transform.position, Quaternion.identity);
+            enemyGenerator.GenerateEnemy(transform.position, transform.rotation);
 		}
 		
 		Destroy(gameObject);
@@ -60,10 +62,7 @@ public class InnocentLifetime : MonoBehaviour
 
     public bool Die() {
         if (isDying) {
-            //Instantiate Monster
-        }
-        else {
-            Instantiate(soulPrefab, transform.position, Quaternion.identity);
+            Instantiate(soulInnoncentPrefab, transform.position, Quaternion.identity);
         }
         return isDying;
     }

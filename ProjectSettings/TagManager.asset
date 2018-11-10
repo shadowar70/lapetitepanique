@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Innocent
+  - FxTemporaire
+  - Monster
   layers:
   - Default
   - TransparentFX

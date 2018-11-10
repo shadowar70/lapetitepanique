@@ -21,7 +21,7 @@ public class ReaperBehavior : MonoBehaviour {
                 if (hit.transform.CompareTag("Innocent")){
                     if (hit.transform.GetComponent<InnocentLifetime>().Die()) {
                         soul += (int) (1000 * hit.transform.GetComponent<InnocentLifetime>().GetScore()) * combo;
-                        Debug.Log("soul: " + soul);
+                        //Debug.Log("soul: " + soul);
                         combo += 1;
                     }
                     else {
@@ -29,6 +29,13 @@ public class ReaperBehavior : MonoBehaviour {
                     }
 
                     Destroy(hit.transform.gameObject);
+                }else if (hit.transform.CompareTag("Monster")) {
+                    if (hit.transform.GetComponent<MonsterBehavior>().TakeDamage()) {
+                        soul += 500 * combo;
+                        //Debug.Log("soul: " + soul);
+                        combo += 1;
+                    }
+                    
                 }
 
             }

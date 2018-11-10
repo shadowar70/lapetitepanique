@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010349831713516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 24.4, y: 15.7, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthyTime: 100
   dyingTime: 3
-  soulPrefab: {fileID: 1531919130274190, guid: 0f355e5b9fc4ef24ea12986bc1c63293, type: 2}
+  soulInnoncentPrefab: {fileID: 1531919130274190, guid: 0f355e5b9fc4ef24ea12986bc1c63293,
+    type: 2}
+  soulMonsterPrefab: {fileID: 1567030958405218, guid: 893fe9560a0eecb448cd72f3e70d0dd4,
+    type: 2}
 --- !u!114 &114660646968969058
 MonoBehaviour:
   m_ObjectHideFlags: 1
