@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 114651915951658278}
   - component: {fileID: 114234445815003722}
   - component: {fileID: 114497985353528546}
+  - component: {fileID: 114861514300705558}
+  - component: {fileID: 114524942522273836}
   m_Layer: 0
   m_Name: Base Monster
   m_TagString: Monster
@@ -152,6 +154,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc1a455392e1614baee6127417c8448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114524942522273836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766001847262330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e3ec3275c7e474fb6ee2900f3da0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceTag: Basic Monster Audio Source
+  audioClips:
+  - {fileID: 8300000, guid: 5563a778bd0fa6d44958550a83ed815f, type: 3}
 --- !u!114 &114651915951658278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,6 +180,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
+--- !u!114 &114861514300705558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766001847262330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ee288c2293e1a46a22e6bbd33c99c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceTag: Basic Monster Audio Source
+  audioClips:
+  - {fileID: 8300000, guid: 8a7954cdd9e1563479e11d49a7e9a7d3, type: 3}
+  - {fileID: 8300000, guid: 8c78a8a4118cd28458a70f4c6663e5a5, type: 3}
+  - {fileID: 8300000, guid: f651960e9100b714a8d385eda0e245b4, type: 3}
+  - {fileID: 8300000, guid: ac0a3b09283b5284eaec2aa4b08ca998, type: 3}
 --- !u!195 &195979348579431542
 NavMeshAgent:
   m_ObjectHideFlags: 1

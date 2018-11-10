@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114909579680991862}
   - component: {fileID: 114371968416279338}
   - component: {fileID: 114923921949047678}
+  - component: {fileID: 114754960356981486}
   m_Layer: 0
   m_Name: Vomit Monster
   m_TagString: Monster
@@ -156,6 +157,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!114 &114754960356981486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800260293013896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e3ec3275c7e474fb6ee2900f3da0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceTag: Vomit Monster Audio Source
+  audioClips:
+  - {fileID: 8300000, guid: 20b8a41c5b915f44190d0e900f7dce1d, type: 3}
 --- !u!114 &114909579680991862
 MonoBehaviour:
   m_ObjectHideFlags: 1
