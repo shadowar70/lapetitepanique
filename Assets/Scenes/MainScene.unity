@@ -8328,10 +8328,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
+  - {fileID: 11400000, guid: 8134f4fbf7fe7844b87a6461f7869849, type: 2}
+  - {fileID: 11400000, guid: cd6fb3c15d4c8fb4e8aa36a41135e343, type: 2}
   - {fileID: 11400000, guid: e03c30c3abd42ab4e8795516bde06ddd, type: 2}
-  - {fileID: 11400000, guid: e03c30c3abd42ab4e8795516bde06ddd, type: 2}
-  - {fileID: 11400000, guid: e03c30c3abd42ab4e8795516bde06ddd, type: 2}
-  - {fileID: 11400000, guid: e03c30c3abd42ab4e8795516bde06ddd, type: 2}
+  - {fileID: 11400000, guid: 75901a0e1738652448e28791cf8ea05a, type: 2}
   minTimeBetweenEvents: 30
   maxTimeBetweenEvents: 60
   eventText: {fileID: 772333558}
@@ -13214,7 +13214,19 @@ MonoBehaviour:
   - {fileID: 1594513551}
   - {fileID: 582992547}
   characterPrefabs:
-  - prefab: {fileID: 1010349831713516, guid: 013087ea0ab083141bf3b11bb1bb1497, type: 2}
+  - prefab: {fileID: 1198373897954480, guid: 7c4a423cd1528dc4c8206c2803297f9b, type: 2}
+    frequency: 1
+  - prefab: {fileID: 1660201508709530, guid: b98187391e1d6bf42a375684479ca53c, type: 2}
+    frequency: 1
+  - prefab: {fileID: 1770161161662348, guid: 6d9b075b227cf0344a44f80738800540, type: 2}
+    frequency: 1
+  - prefab: {fileID: 1052185790241582, guid: b1d7907742aba3746b42775d4d88138b, type: 2}
+    frequency: 1
+  - prefab: {fileID: 1212328070734488, guid: 8a3a8012de3f76c42be4a9ae77995a84, type: 2}
+    frequency: 1
+  - prefab: {fileID: 1105171739001822, guid: b9c2877671efbbe4da9bfc4230d535af, type: 2}
+    frequency: 1
+  - prefab: {fileID: 1187632650451536, guid: dff96affa9baa6a49981df8e2d6f7d10, type: 2}
     frequency: 1
 --- !u!4 &1150874165
 Transform:
