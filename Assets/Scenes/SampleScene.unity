@@ -152,9 +152,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114171350480158986, guid: ce4bbae5e7721fe47b2e6342817a43cd,
+    - target: {fileID: 198512765992125420, guid: ce4bbae5e7721fe47b2e6342817a43cd,
         type: 2}
-      propertyPath: teleportationParticles
+      propertyPath: ShapeModule.m_SpriteRenderer
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 137724364541542498, guid: ce4bbae5e7721fe47b2e6342817a43cd,

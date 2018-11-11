@@ -53,17 +53,23 @@ public class EnemyGenerator : MonoBehaviour
 	{
 		var randomNumber = UnityEngine.Random.Range(0f, totalFrequency);
 
-		var frequencyOffset = 0f;
-		foreach(var prefabFrequency in prefabs)
+		GameObject selectedPrefab = null;
+		while(selectedPrefab == null)
 		{
-			if(frequencyOffset <= randomNumber && randomNumber <= frequencyOffset + prefabFrequency.frequency)
+			var frequencyOffset = 0f;
+			foreach(var prefabFrequency in prefabs)
 			{
-				return prefabFrequency.prefab;
+				if(frequencyOffset <= randomNumber && randomNumber <= frequencyOffset + prefabFrequency.frequency)
+				{
+					return prefabFrequency.prefab;
+				}
+
+				frequencyOffset += prefabFrequency.frequency;
 			}
 
-			frequencyOffset += prefabFrequency.frequency;
+			selectedPrefab = prefabs.Select(e => e.prefab).FirstOrDefault();
 		}
-
-		return prefabs.Select(e => e.prefab).FirstOrDefault();
+		
+		return selectedPrefab;
 	}
 }
