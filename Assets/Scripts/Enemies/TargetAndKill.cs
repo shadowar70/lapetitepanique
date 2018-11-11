@@ -11,9 +11,14 @@ public class TargetAndKill : MonoBehaviour
     private NavMeshAgent navMeshAgent = null;
 	private GeneratorManager generatorManager;
 	private GameObject target;
+    private SpriteRenderer renderBody;
+    private Sprite spriteNormal;
+    [SerializeField] private Sprite spriteAttack;
 
-	void Awake()
+    void Awake()
 	{
+        renderBody = gameObject.GetComponent<SpriteRenderer>();
+        spriteNormal = renderBody.sprite;
         navMeshAgent = GetComponent<NavMeshAgent>();
 		generatorManager = FindObjectOfType<GeneratorManager>();
 	}
@@ -34,7 +39,9 @@ public class TargetAndKill : MonoBehaviour
     {
 		if(collision.gameObject == target)
 		{
-			Destroy(target);
+            renderBody.sprite = spriteAttack;
+            Invoke("StopAttackAnim", 0.3f);
+            Destroy(target);
 		}
     }
 
@@ -43,4 +50,8 @@ public class TargetAndKill : MonoBehaviour
 		yield return new WaitForSeconds(cooldown);
 		target = generatorManager.GeneratedCharacters[Random.Range(0, generatorManager.GeneratedCharacters.Count)];
 	}
+
+    private void StopAttackAnim() {
+        renderBody.sprite = spriteNormal;
+    }
 }

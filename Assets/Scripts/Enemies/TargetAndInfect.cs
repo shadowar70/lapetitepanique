@@ -13,8 +13,14 @@ public class TargetAndInfect : MonoBehaviour
 	private GameObject target;
 	private EnemyGenerator enemyGenerator;
 
-	void Awake()
+    private SpriteRenderer renderBody;
+    private Sprite spriteNormal;
+    [SerializeField] private Sprite spriteAttack;
+
+    void Awake()
 	{
+        renderBody = gameObject.GetComponent<SpriteRenderer>();
+        spriteNormal = renderBody.sprite;
         navMeshAgent = GetComponent<NavMeshAgent>();
 		generatorManager = FindObjectOfType<GeneratorManager>();
 		enemyGenerator = FindObjectOfType<EnemyGenerator>();
@@ -36,7 +42,9 @@ public class TargetAndInfect : MonoBehaviour
     {
 		if(collision.gameObject == target)
 		{
-			enemyGenerator.GenerateEnemy(collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+            renderBody.sprite = spriteAttack;
+            Invoke("StopAttackAnim", 0.3f);
+            enemyGenerator.GenerateEnemy(collision.gameObject.transform.position, collision.gameObject.transform.rotation);
 			Destroy(target);
 		}
     }
@@ -46,4 +54,8 @@ public class TargetAndInfect : MonoBehaviour
 		yield return new WaitForSeconds(cooldown);
 		target = generatorManager.GeneratedCharacters[Random.Range(0, generatorManager.GeneratedCharacters.Count)];
 	}
+
+    private void StopAttackAnim() {
+        renderBody.sprite = spriteNormal;
+    }
 }

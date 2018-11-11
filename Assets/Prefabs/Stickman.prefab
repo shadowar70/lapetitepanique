@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 95479168611465548}
   - component: {fileID: 114628063594481196}
   - component: {fileID: 114157744498863844}
+  - component: {fileID: 114357680508919932}
   m_Layer: 0
   m_Name: Stickman
   m_TagString: Innocent
@@ -121,6 +122,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc1a455392e1614baee6127417c8448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114357680508919932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010349831713516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97dda5ceed55154a8a34236ab151eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceTag: Innocent Audio Source
+  audioClipsInnocent:
+  - {fileID: 8300000, guid: 801030ea746869542a85ed9c1c7e5429, type: 3}
+  - {fileID: 8300000, guid: 1ef96e24f4fe8a242a8b40612f08b22f, type: 3}
+  - {fileID: 8300000, guid: 211c3fbbed022e643b41130cbb7ef573, type: 3}
+  - {fileID: 8300000, guid: d6bf5bae7ec0fea4dbf45ba765506694, type: 3}
+  - {fileID: 8300000, guid: 45854783cdadb7e469ad8fea5b4265f5, type: 3}
+  audioClipsVictim:
+  - {fileID: 8300000, guid: ab39faeece49771438733166d890b3b8, type: 3}
+  - {fileID: 8300000, guid: f9bfed296014a3343a53dd3216847622, type: 3}
+  - {fileID: 8300000, guid: 9c4db334312b162428665d51cdb6acf4, type: 3}
+  - {fileID: 8300000, guid: aa6fc9cb983618f4ab66a8aa42219efc, type: 3}
+  - {fileID: 8300000, guid: 3ff80acef0bd7724c8c25e819e9310d6, type: 3}
+  - {fileID: 8300000, guid: 0158e5a6630f9214d82beef693c18d93, type: 3}
+  - {fileID: 8300000, guid: 34bd164651268684e866727bc519649e, type: 3}
+  - {fileID: 8300000, guid: 9b88bd5ff0604ba43b21a651a112aab2, type: 3}
+  - {fileID: 8300000, guid: 95ec571cc4f721b4a8c077b8e488cada, type: 3}
+  - {fileID: 8300000, guid: 8a2bf6be75f88614b88965fdc6d02932, type: 3}
+  - {fileID: 8300000, guid: bc8599f8861e6ca4f80d4b7903ef279c, type: 3}
+  - {fileID: 8300000, guid: 9255e4b631fee9b459c2efd3b66bcf70, type: 3}
+  - {fileID: 8300000, guid: 38ca2e644a3ba75428e7d2d3fef2f190, type: 3}
+  - {fileID: 8300000, guid: d91f8794e6e1c7d40bce93fbf5418021, type: 3}
+  - {fileID: 8300000, guid: 929cc3df1a9a33442812ca37c448b11f, type: 3}
+  - {fileID: 8300000, guid: 6b27cf1b9354e19449ff5c6603c81758, type: 3}
+  - {fileID: 8300000, guid: 78f343d0fac716e44891dcca8936b510, type: 3}
+  - {fileID: 8300000, guid: 81bb2694171d54c40b1966454660676a, type: 3}
+  - {fileID: 8300000, guid: 5ba65b65b7617eb4db843675df8c811c, type: 3}
 --- !u!114 &114628063594481196
 MonoBehaviour:
   m_ObjectHideFlags: 1

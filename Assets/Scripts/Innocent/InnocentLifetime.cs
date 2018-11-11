@@ -109,4 +109,8 @@ public class InnocentLifetime : MonoBehaviour
     public float GetScore() {
         return (scoreMultiplier / dyingTime)*2;
     }
+
+    public bool GetIsDying() {
+        return isDying;
+    }
 }
