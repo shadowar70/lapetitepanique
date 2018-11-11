@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e14a0e024092c04b94f011c628b0690, type: 3}
   m_Name: Increase Character Count Event
   m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: c397143fb4531ba42827ee6a85d7278d, type: 3}
   time: 10
   characterCountIncrease: 15

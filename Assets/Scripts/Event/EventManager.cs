@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class EventManager : MonoBehaviour
 {
 	public AbstractEvent[] events = new AbstractEvent[0];
@@ -12,7 +13,14 @@ public class EventManager : MonoBehaviour
 
 	public delegate void EventStartedDelegate(AbstractEvent eventt);
 	public event EventStartedDelegate EventStarted;
-	
+
+	private AudioSource audioSource = null;
+
+	void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	void Start()
 	{
 		StartCoroutine(WaitAndLaunchNextEvent());
@@ -35,5 +43,6 @@ public class EventManager : MonoBehaviour
 		eventText.text = myEvent.Label;
 		eventAnimator.SetTrigger("Show");
 		myEvent.Execute(this);
+		audioSource.PlayOneShot(myEvent.audio);
 	}
 }
