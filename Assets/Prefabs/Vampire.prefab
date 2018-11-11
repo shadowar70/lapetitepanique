@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 114724844919903602}
   m_Layer: 0
   m_Name: Vampire
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,7 +315,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541254792987964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.9, y: 105.7, z: 0}
+  m_LocalPosition: {x: -7.7856107, y: -26.187956, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 4217030687430378}
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.90813154
+  m_Length: 0.9081316
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4912174330176884}
   m_AttachedIK: {fileID: 0}
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.0280468
+  m_Length: 2.0280476
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4310203958604760}
   m_AttachedIK: {fileID: 0}
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.9284803
+  m_Length: 1.9284807
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4198547050416144}
   m_AttachedIK: {fileID: 0}
@@ -654,7 +654,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43265855547588866, guid: d65f345c259804245b8045007f80e24c, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4217030687430378}
   - {fileID: 4310203958604760}
@@ -1170,7 +1170,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 20
+    type: 14
     angle: 80
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1184,7 +1184,7 @@ ParticleSystem:
     m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
-    m_SkinnedMeshRenderer: {fileID: 0}
+    m_SkinnedMeshRenderer: {fileID: 137724364541542498}
     m_Sprite: {fileID: 0}
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
