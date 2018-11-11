@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Text scoreValue;
     [SerializeField] private Text timerValue;
     [SerializeField] private Text multiplierValue;
+    public Animator musicAnimator = null;
+    public AudioSource musicSource = null;
+    public AudioSource musicSourceMonster = null;
 
     private Text finalScoreValue;
 
@@ -31,6 +34,9 @@ public class GameManager : MonoBehaviour {
             finalScoreValue.text = scoreValue.text;
             menuGameOver.SetActive(true);
             Time.timeScale = 0;
+            musicAnimator.enabled = false;
+            musicSource.pitch = -0.4f;
+            musicSourceMonster.volume = 0f;
         }
 
         timerValue.text = "" + (int)timerScore;
