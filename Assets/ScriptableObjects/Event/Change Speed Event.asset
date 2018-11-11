@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ef7283e42ba7e4d8341f69444c44fe, type: 3}
   m_Name: Change Speed Event
   m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: 99c94bd76cbd7f64ab39b3c875f13d56, type: 3}
   time: 10
   speedFactor: 4

@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ab7404b957ced4bbb21804caaea028, type: 3}
   m_Name: Change Size Event
   m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: c397143fb4531ba42827ee6a85d7278d, type: 3}
   time: 10
   sizeChangeTime: 0.7
   scaleFactor: 0.6
