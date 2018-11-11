@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Anima2D;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -19,7 +20,8 @@ public class InnocentLifetime : MonoBehaviour
 
     private float scoreMultiplier;
 
-    private SpriteRenderer rendererBody;
+    private SpriteRenderer spriteRenderer;
+    private SpriteMeshInstance spriteMeshInstance;
 
     void Awake()
 	{
@@ -30,7 +32,8 @@ public class InnocentLifetime : MonoBehaviour
 	void Start()
 	{
 		startTime = Time.time;
-        rendererBody = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteMeshInstance = GetComponent<SpriteMeshInstance>();
 
         StartCoroutine(WaitBeforeDyingState());
 
@@ -74,12 +77,27 @@ public class InnocentLifetime : MonoBehaviour
         while (true) {
 
             i += 0.1f;
-            if (isRed) {
-                rendererBody.color = Color.Lerp(rendererBody.color, Color.white, i);
+
+            if(spriteRenderer != null)
+            {
+                if (isRed) {
+                    spriteRenderer.color = Color.Lerp(spriteRenderer.color, Color.white, i);
+                }
+                else {
+                    spriteRenderer.color = Color.Lerp(spriteRenderer.color, Color.red, i);
+                }
             }
-            else {
-                rendererBody.color = Color.Lerp(rendererBody.color, Color.red, i);
+
+            if(spriteMeshInstance != null)
+            {
+                if (isRed) {
+                    spriteMeshInstance.color = Color.Lerp(spriteMeshInstance.color, Color.white, i);
+                }
+                else {
+                    spriteMeshInstance.color = Color.Lerp(spriteMeshInstance.color, Color.red, i);
+                }
             }
+
 
             if(i> 1 && isRed) {
                 isRed = false;
