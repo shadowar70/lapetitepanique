@@ -1065,6 +1065,8 @@ MonoBehaviour:
   timerValue: {fileID: 378699036}
   multiplierValue: {fileID: 253703495}
   musicAnimator: {fileID: 1657965729}
+  musicSource: {fileID: 1300505865}
+  musicSourceMonster: {fileID: 876166703}
   menuGameOver: {fileID: 1167145389}
 --- !u!4 &152391162
 Transform:
