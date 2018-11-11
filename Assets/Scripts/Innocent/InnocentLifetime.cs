@@ -50,7 +50,7 @@ public class InnocentLifetime : MonoBehaviour
 		yield return new WaitForSeconds(healthyTime);
 
         isDying = true;
-        animator.SetBool("Dying", true);
+        //animator.SetBool("Dying", true);
         StartCoroutine(DeathStarting());
 
         StartCoroutine(WaitBeforeDeathState());
