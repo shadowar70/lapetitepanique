@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] Text timerValue;
     [SerializeField] Text multiplierValue;
 
+    public GameObject menuGameOver;
+
 
     void Start () {
         instance = this;
@@ -23,7 +25,8 @@ public class GameManager : MonoBehaviour {
         timerScore -= Time.fixedDeltaTime;
 
         if(timerScore <= 0) {
-            Debug.Log("PERDU !");
+            menuGameOver.SetActive(true);
+            Time.timeScale = 0;
         }
 
         timerValue.text = "" + (int)timerScore;
@@ -31,10 +34,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ImpactTimerScore(float impact) {
-
         timerScore += impact;
-        Debug.Log("timerScore: " + timerScore);
-
     }
 
     public void UpdateScoreAndMultiplier(int score, int multiplier) {

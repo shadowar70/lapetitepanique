@@ -138,6 +138,8 @@ MonoBehaviour:
     type: 2}
   soulMonsterPrefab: {fileID: 1567030958405218, guid: 893fe9560a0eecb448cd72f3e70d0dd4,
     type: 2}
+  bloodPrefab: {fileID: 1250306880383008, guid: 580dfab0769d5e5449591d64503494f7,
+    type: 2}
 --- !u!114 &114660646968969058
 MonoBehaviour:
   m_ObjectHideFlags: 1
