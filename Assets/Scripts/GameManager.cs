@@ -7,14 +7,17 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
     public float timerScore = 120f;
-    [SerializeField] Text scoreValue;
-    [SerializeField] Text timerValue;
-    [SerializeField] Text multiplierValue;
+    [SerializeField] private Text scoreValue;
+    [SerializeField] private Text timerValue;
+    [SerializeField] private Text multiplierValue;
+
+    private Text finalScoreValue;
 
     public GameObject menuGameOver;
 
 
     void Start () {
+        finalScoreValue = menuGameOver.transform.GetChild(1).transform.GetChild(1).GetComponent<Text>();
         instance = this;
 		
 	}
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour {
         timerScore -= Time.fixedDeltaTime;
 
         if(timerScore <= 0) {
+            finalScoreValue.text = scoreValue.text;
             menuGameOver.SetActive(true);
             Time.timeScale = 0;
         }
