@@ -7,10 +7,18 @@ public class TriggerAnimatorAfterDelay : MonoBehaviour
 	public float cooldown = 6f;
 	public string targetTag = "";
 	public string triggerName = "Show";
+    public string audioSourceTag = null;
+    private AudioSource audioSource;
+    public AudioClip[] audioClips = new AudioClip[0];
+    public Animator mouthAnimator;
 
-	void Start()
+
+    void Start()
 	{
-		StartCoroutine(WaitAndTrigger());
+        if(audioSourceTag != null) {
+            audioSource = GameObject.FindGameObjectWithTag(audioSourceTag).GetComponent<AudioSource>();
+        }
+        StartCoroutine(WaitAndTrigger());
 	}
 
 	void OnDisable()
@@ -31,7 +39,15 @@ public class TriggerAnimatorAfterDelay : MonoBehaviour
 			var gameObject = GameObject.FindGameObjectWithTag("SplashFx");
 			if(gameObject != null)
 			{
-				var animator = gameObject.GetComponent<Animator>();
+                if (audioSource != null && !audioSource.isPlaying) {
+                    audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
+                }
+
+                if(mouthAnimator != null) {
+                    mouthAnimator.SetTrigger("Vomit");
+                }
+
+                var animator = gameObject.GetComponent<Animator>();
 				animator?.SetTrigger(triggerName);
 			}
 		}
