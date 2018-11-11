@@ -34,16 +34,22 @@ public class ChangeSpeedEvent : AbstractEvent
 	{
 		foreach(var character in GeneratorManager.GeneratedCharacters)
 		{
-			character.GetComponent<NavMeshAgent>().speed *= speedFactor;
-			character.GetComponent<NavMeshAgent>().acceleration *= speedFactor;
+			if(character != null)
+			{
+				character.GetComponent<NavMeshAgent>().speed *= speedFactor;
+				character.GetComponent<NavMeshAgent>().acceleration *= speedFactor;
+			}
 		}
 
 		yield return new WaitForSeconds(time);
 		
 		foreach(var character in GeneratorManager.GeneratedCharacters)
 		{
-			character.GetComponent<NavMeshAgent>().speed /= speedFactor;
-			character.GetComponent<NavMeshAgent>().acceleration /= speedFactor;
+			if(character != null)
+			{
+				character.GetComponent<NavMeshAgent>().speed /= speedFactor;
+				character.GetComponent<NavMeshAgent>().acceleration /= speedFactor;
+			}
 		}
 	}
 }

@@ -44,7 +44,10 @@ public class ChangeSizeEvent : AbstractEvent
 				transformationTime += Time.deltaTime;
 				foreach(var character in GeneratorManager.GeneratedCharacters)
 				{
-					character.transform.localScale = Vector3.Lerp(initScale, targetScale, transformationTime / sizeChangeTime);
+					if(character != null)
+					{
+						character.transform.localScale = Vector3.Lerp(initScale, targetScale, transformationTime / sizeChangeTime);
+					}
 				}
 				yield return new WaitForEndOfFrame();
 			}
@@ -57,7 +60,10 @@ public class ChangeSizeEvent : AbstractEvent
 				transformationTime += Time.deltaTime;
 				foreach(var character in GeneratorManager.GeneratedCharacters)
 				{
-					character.transform.localScale = Vector3.Lerp(targetScale, initScale, transformationTime / sizeChangeTime);
+					if(character != null)
+					{
+						character.transform.localScale = Vector3.Lerp(targetScale, initScale, transformationTime / sizeChangeTime);
+					}
 				}
 				yield return new WaitForEndOfFrame();
 			}
